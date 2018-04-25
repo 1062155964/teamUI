@@ -3,3 +3,55 @@
 	background-color: #f8f8f8;
 }
 
+
+.siderbar {
+	width: 240px;
+	background-color: #f1f1f1;
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	height: 100vw;
+}
+
+.siderul {
+	list-style-type: none; /*取消li前面的修饰*/
+	margin: 0;
+	padding: 0;
+	width: 240px;
+	background-color: #f1f1f1;
+	position: absolute;  /*绝对定位*/
+	margin-top: -20px;  /*使侧边栏的头部刚好嵌在head下方，注意此处不能直接用top，因为top是相对页面整体进行布局*/
+}
+
+.siderul li a{
+	display: block;			/*使a标签成为块级元素*/
+	color: #000;
+	padding: 8px 50px;
+	text-decoration: none; /*取消文本修饰*/
+}
+
+#sonli {
+	display: none;		/*使子导航栏在未点击主导航栏时隐藏*/
+	color: #000;
+	padding: 8px 70px;
+	text-decoration: none; /*取消文本修饰*/	
+}
+
+.siderul li a.active {
+	background-color: #245269;
+	color: white; 
+	text-decoration: none; /*取消文本修饰*/
+}
+
+
+/* 鼠标移动到选项上修改背景颜色 */
+.siderul li a:hover:not(.active) {
+	background-color: #245269;
+	color: white !important;	/*由于sonli为id选择器权值较高,则应设置字体颜色白色为最高权值*/
+	text-decoration: none;
+}
+
+.icon-xm{
+	left:-10px;
+	top:2px;
+}
